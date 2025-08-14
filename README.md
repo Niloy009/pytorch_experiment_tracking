@@ -114,5 +114,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 Author
 **Niloy Saha Roy**  
-_Machine Learning & Deep Learning Engineer_
+_Machine Learning & Deep Learning Engineer_ <br>
 Email: niloysaha.887@gmail.com
