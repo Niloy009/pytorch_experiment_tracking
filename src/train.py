@@ -49,7 +49,7 @@ import torch
 from torch import nn
 import torchvision
 from torchmetrics.classification.accuracy import Accuracy
-from . import data_setup, data_module, utils, engine, model_builder
+from src import data_setup, data_module, utils, engine, model_builder
 
 # Set device
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
