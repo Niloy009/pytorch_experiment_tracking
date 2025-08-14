@@ -38,7 +38,7 @@ Created: 2025-08-14
 import torchvision
 import torch
 from torch import nn
-from src import utils
+from . import utils
 
 # Set device
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"

@@ -49,7 +49,7 @@ import torch
 from torch import nn
 import torchvision
 from torchmetrics.classification.accuracy import Accuracy
-from src import data_setup, data_module, utils, engine, model_builder
+from . import data_setup, data_module, utils, engine, model_builder
 
 # Set device
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -159,5 +159,5 @@ for dataloader_name, train_dataloader in train_dataloaders.items():
 
             # Save the model to file so we can import it later if needed
             SAVE_FILE_PATH = f"07_{model_name}_{dataloader_name}_{epochs}_epochs.pth"
-            utils.save_model(model=model, target_dir='../models', model_name=SAVE_FILE_PATH)
+            utils.save_model(model=model, target_dir='models', model_name=SAVE_FILE_PATH)
             print("-"*50 + "\n")

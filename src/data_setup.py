@@ -29,7 +29,7 @@ def download_data(source:str, destination:str, remove_source:bool = True)->Path:
         pathlib.Path to downloaded data.
     """
     # Setup data path
-    data_path = Path("../data/")
+    data_path = Path("data/")
     image_path = data_path / destination # images from a subset of classes from the Food101 dataset
 
     # If the image folder doesn't exist, download it and prepare it...
