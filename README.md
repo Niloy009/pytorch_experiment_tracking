@@ -62,19 +62,21 @@ pip install torch torchvision torchmetrics matplotlib requests tqdm tensorboard
 
 ### Train Models (Default Settings)
 ```bash
-python train.py
+python -m src.train
 ```
 
 ### Custom Experiment Example
 ```bash
-python train.py \
+python -m src.train \
     --models effnetb0 effnetb2 \
-    --splits 10 20 \
+    --data_pct 10 20 \
     --epochs 5 10 \
     --batch-size 32 \
     --lr 0.001 \
     --seed 42 \
-    --artifacts-dir ./artifacts
+    --data-root ./data \
+    --artifacts-dir ./artifacts \
+    -vv
 ```
 
 ## 📊 TensorBoard Logging
