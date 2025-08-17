@@ -6,14 +6,12 @@ batch_size: 32
 learning_rate: 0.001
 epochs_list: [5, 10]
 models: ["effnetb0", "effnetb2"]
-data_pct: [10, 20]  # previous name was splits
+data_pct: [10, 20] 
 seed: 42
 data_root: "data"
 artifacts_dir: "artifacts"
 
-# ======================
 # Dataset configuration
-# ======================
 datasets:
   "10":
     url: "https://github.com/mrdbourke/pytorch-deep-learning/raw/refs/heads/main/data/pizza_steak_sushi.zip"
@@ -22,5 +20,5 @@ datasets:
     url: "https://github.com/mrdbourke/pytorch-deep-learning/raw/refs/heads/main/data/pizza_steak_sushi_20_percent.zip"
     destination: "pizza_steak_sushi_20"
 
-# Which split to use for testing in all runs
-test_pct: 10 # previous name was test_split
+# data to use for testing in all runs
+test_pct: 10 
