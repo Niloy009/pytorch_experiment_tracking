@@ -286,7 +286,7 @@ def experiment_tag(pct: int, model_name: str, epochs: int) -> str:
 def save_path(artifacts_dir: Path, pct: int, model_name: str, epochs: int) -> Path:
     """Generates a unique file path for saving model artifacts for a specific experiment run.
 
-    Creates a timestamped directory and file name based on model, data percentage, and epochs, 
+    Creates file name based on model, data percentage, and epochs, 
     ensuring the directory exists.
 
     Args:
@@ -298,11 +298,9 @@ def save_path(artifacts_dir: Path, pct: int, model_name: str, epochs: int) -> Pa
     Returns:
         The full Path to the file where model weights should be saved.
     """
-    ts = datetime.now().strftime("%Y%m%d-%H%M%S")
-    fname = f"{ts}_{model_name}_{pct}pct_{epochs}ep"
+    fname = f"{model_name}_{pct}pct_{epochs}ep"
     # store each run in its own folder (nice place for config + weights)
-    run_dir = artifacts_dir / "models" / fname
-    _ensure_dirs(run_dir)
+    run_dir = artifacts_dir / "models"
     return run_dir / f"{fname}.pth"
 
 
