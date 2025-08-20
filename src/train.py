@@ -44,7 +44,7 @@ from torch import nn
 import torchvision
 from torchmetrics.classification import Accuracy
 
-from . import data_setup, data_module, utils, engine, model_builder
+from src import data_setup, data_module, utils, engine, model_builder
 
 
 # Logging
